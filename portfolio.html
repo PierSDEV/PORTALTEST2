@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portál Pracovníků</title>
+    <title>Portfolio Pracovníků</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
 </head>
 <body>
     <!-- Navigační panel -->
     <div class="navbar">
         <div class="logo">
-            <h1>Portál Pracovníků</h1>
+            <h1>Portfolio</h1>
         </div>
         <div class="nav-links">
             <a href="index.html" data-translate="home">Domů</a>
@@ -22,21 +20,16 @@
             <a href="admin.html" data-translate="adminPanel">Admin Panel</a>
             <a href="settings.html" data-translate="settings">Nastavení</a>
         </div>
-        <!-- Přepínač jazyků -->
-        <div class="language-switcher">
-            <button onclick="setLanguage('cs')">Čeština</button>
-            <button onclick="setLanguage('en')">English</button>
-        </div>
     </div>
 
-    <!-- Obsah domovské stránky -->
-    <div class="content">
-        <h2>Vítejte na Portálu Pracovníků</h2>
-        <p>Tento portál vám umožní spravovat projekty, hledat pracovníky a sledovat pokrok.</p>
+    <!-- Sekce hodnocení a zpětné vazby -->
+    <div class="feedback-section">
+        <h3>Hodnocení a Zpětná Vazba</h3>
+        <ul id="feedback-list">
+            <!-- Zde budou zobrazena hodnocení a komentáře -->
+        </ul>
+        <button onclick="addFeedback()">Přidat Zpětnou Vazbu</button>
     </div>
-
-    <!-- Sekce pro notifikace v reálném čase -->
-    <div id="notifications-list" class="real-time-notification-list"></div>
 
     <script src="script.js"></script>
 </body>

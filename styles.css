@@ -30,7 +30,38 @@ body, html {
     color: #17a2b8;
 }
 
-/* Zlepšení tlačítek a interaktivních prvků */
+/* Logo a přepínač jazyka */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.language-switcher button {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.language-switcher button:hover {
+    background-color: #495057;
+}
+
+/* Hlavní obsah stránky */
+.content {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styly pro tlačítka */
 .button, .chart-container button, .modal-content button {
     background-color: #007bff;
     color: white;
@@ -46,7 +77,7 @@ body, html {
     background-color: #0056b3;
 }
 
-/* Stylizace boxů, karet a sekcí */
+/* Styly karet a boxů */
 .card {
     background-color: #f8f9fa;
     border-radius: 8px;
@@ -60,6 +91,116 @@ body, html {
     box-shadow: 0 0 15px rgba(0, 123, 255, 0.3);
 }
 
+/* Styl pro hodnocení a zpětnou vazbu */
+.feedback-section {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.feedback-item {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
 /* Responzivní design */
-@media (max-width: 1024px) {
-    .navbar
+@media (max-width: 1024px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
+
+/* Styl pro vizualizaci pokroku projektů */
+.progress-visualization {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    margin-bottom: 15px;
+}
+
+.progress-container {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 25px;
+    background-color: #28a745;
+    transition: width 0.4s ease;
+    text-align: center;
+    color: white;
+    line-height: 25px;
+    border-radius: 5px 0 0 5px;
+}
+
+/* Styl pro notifikace v reálném čase */
+.real-time-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    z-index: 1000;
+}
+
+.real-time-notification.fade-out {
+    opacity: 0;
+}
+
+/* Styl pro správu souborů */
+.file-management {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.file-management h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.file-management ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.file-management li {
+    padding: 8px;
+    background-color: #f0f2f5;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
